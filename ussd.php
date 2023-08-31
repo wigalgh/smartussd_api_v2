@@ -183,8 +183,6 @@ if(!empty($data) && is_object($dataobj))
 
                                     }else{
                                        updateTracking($dataobj->phonenumber,$dataobj->sessionid,$dataobj->mode,$dataobj->username,$TIME,$DATA,'6');
-                                       // $RESPONSE_DATA = "$NETWORKID|END|$dataobj->phonenumber|$dataobj->sessionid|Request Cancelled. Thanks for using our system.|$dataobj->username |$dataobj->trafficid";
-                                       // echo $RESPONSE_DATA;
                                        $dataobj->mode = "end";
                                        $dataobj->userdata = "Request Cancelled. Thanks for using our system. ";
                                     }
