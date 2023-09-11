@@ -86,30 +86,31 @@ include('include/connect.php');
 //query to update individual field based on the option passed//
  $progressq="";
 
- if($field=="option"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', option='$data' WHERE ID='$msisdn'  ";
- }
- if($field=="donor_name"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', donor_name='$data' WHERE ID='$msisdn'  ";
- }
-if($field=="amount"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', amount='$data' WHERE ID='$msisdn'  ";
- }
-if($field=="network"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', network='$data' WHERE ID='$msisdn'  ";
- }
- if($field=="walletno"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', walletno='$data' WHERE ID='$msisdn'  ";
- }
- if($field=="volunteer_name"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', volunteer_name='$data' WHERE ID='$msisdn'  ";
- }
-  if($field=="age"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', age='$data' WHERE ID='$msisdn'  ";
- }
-  if($field=="email"){
-   $progressq="UPDATE progress SET sessionId='$sessionid', email='$data' WHERE ID='$msisdn'  ";
- }
+  if($field=="option"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `option`='$data' WHERE `ID`='$msisdn'  ";
+  }
+  if($field=="donor_name"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `donor_name`='$data' WHERE `ID`='$msisdn'  ";
+  }
+ if($field=="amount"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `amount`='$data' WHERE `ID`='$msisdn'  ";
+  }
+ if($field=="network"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `network`='$data' WHERE `ID`='$msisdn'  ";
+  }
+  if($field=="walletno"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `walletno`='$data' WHERE `ID`='$msisdn'  ";
+  }
+  if($field=="volunteer_name"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `volunteer_name`='$data' WHERE `ID`='$msisdn'  ";
+  }
+   if($field=="age"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `age`='$data' WHERE `ID`='$msisdn'  ";
+  }
+   if($field=="email"){
+    $progressq="UPDATE `progress` SET `sessionId`='$sessionid', `email`='$data' WHERE `ID`='$msisdn'  ";
+  }
+  
  
   $progress=$conn->prepare($progressq);
   $progress->execute();
